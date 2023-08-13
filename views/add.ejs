@@ -1,0 +1,13 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+<div class="main">
+    <form action="/add" method="post">
+        <input type="text" name="medicine" placeholder="enter medicine"> <br> <br>
+        <input type="text" name="expire_date" placeholder="enter expire_date"><br> <br>
+        <input type="number" name="quantity" placeholder="enter quntity"> <br> <br>
+        <input type="number" name="price" placeholder="enter price"> <br> <br>
+        <button>add medicine</button>
+    </form>
+</div>
+
+<%- include("partials/footer")%>

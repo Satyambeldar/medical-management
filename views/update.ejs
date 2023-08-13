@@ -1,0 +1,13 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+<div class="main">
+    <form action="/update/<%=post._id%>" method="post">
+        <input type="text" name="medicine" placeholder="enter medicine" value="<%=post.medicine%>"> <br> <br>
+        <input type="text" name="expire_date" placeholder="enter expire_date" value="<%=post.expire_date%>"><br> <br>
+        <input type="number" name="quantity" placeholder="enter quntity" value="<%=post.quantity%>">  <br> <br>
+        <input type="number" name="price" placeholder="enter price" value="<%=post.price%>"><br> <br>
+        <button>update medicine</button>
+    </form>
+</div>
+
+<%- include("partials/footer")%>

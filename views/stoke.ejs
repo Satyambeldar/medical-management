@@ -1,0 +1,37 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+<br>
+<br>
+<div class="main">
+    <h2>add new stock </h2><br><br>
+
+    <table border="1">
+        <tr>
+            <th scope="col">medicine</th>
+            <th scope="col">expire_date</th>
+            <th scope="col">quantity</th>
+            <th scope="col">price</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+        <tbody>
+    
+            <% posts.forEach(function(post,idx){ %>
+               
+            <tr>
+                <td><%= post.medicine%></td>
+                <td><%= post.expire_date%></td>
+                <td><%= post.quantity%></td>
+                <td><%= post.price%></td>
+                <td><a href="/update/<%=post._id%>">✏️</a> </td>
+                <td><a href="/delete/<%=post._id%>">❌</a></td>
+             
+            </tr>
+           <% })%>
+           
+    
+        </table> 
+        </tbody>
+</div>
+
+<%- include("partials/footer")%>
